@@ -3,18 +3,18 @@
  * @author huanganx
  */
 
-const redis = require('redis');
+const redis = require('redis')
 const {
   Json
-} = require('sequelize/types/lib/utils');
+} = require('sequelize/types/lib/utils')
 const {
   REDIS_CONF
-} = require('../conf/db');
+} = require('../conf/db')
 
 // 创建客户端
-const redisClient = redis.createClient(REDIS_CONF.port, REDIS_CONF.host);
+const redisClient = redis.createClient(REDIS_CONF.port, REDIS_CONF.host)
 redisClient.on('error', err => {
-  console.log('redis error', err);
+  console.log('redis error', err)
 })
 
 /**

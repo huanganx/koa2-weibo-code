@@ -5,13 +5,13 @@ router.get('/', async (ctx, next) => {
     title: 'Hello Koa 2!',
     isMe: true,
     blogList: [{
-        id: 1,
-        title: 'aaa'
-      },
-      {
-        id: 2,
-        title: 'bbb'
-      }
+      id: 1,
+      title: 'aaa'
+    },
+    {
+      id: 2,
+      title: 'bbb'
+    }
     ]
   })
 })
