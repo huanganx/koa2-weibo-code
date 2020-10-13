@@ -13,7 +13,8 @@ const {
 const { isProd } = require('./utils/env')
 
 const index = require('./routes/index')
-const users = require('./routes/users')
+const userViewerRouter = require('./routes/views/user')
+const userAPIRouter = require('./routes/api/user')
 const errorViewerRouter = require('./routes/views/error')
 
 // error handler
@@ -61,7 +62,8 @@ app.use(session({
 
 // routes
 app.use(index.routes(), index.allowedMethods())
-app.use(users.routes(), users.allowedMethods())
+app.use(userViewerRouter.routes(), userViewerRouter.allowedMethods())
+app.use(userAPIRouter.routes(), userAPIRouter.allowedMethods())
 app.use(errorViewerRouter.routes(), errorViewerRouter.allowedMethods())
 
 // error-handling
